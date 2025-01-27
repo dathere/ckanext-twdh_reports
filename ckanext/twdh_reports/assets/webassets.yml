@@ -1,14 +1,18 @@
-# twdh_reports-js:
-#   filter: rjsmin
-#   output: ckanext-twdh_reports/%(version)s-twdh_reports.js
-#   contents:
-#     - js/twdh_reports.js
-#   extra:
-#     preload:
-#       - base/main
+twdh_reports-js:
+  filter: rjsmin
+  output: ckanext-twdh_reports/%(version)s-twdh_reports.js
+  extra:
+    preload:
+      - base/main
+  contents:
+    - vendor/datatables.js
+    - vendor/datatables.mark.js
+    - vendor/mark.js
+    - twdh_reports.js
 
-# twdh_reports-css:
-#   filter: cssrewrite
-#   output: ckanext-twdh_reports/%(version)s-twdh_reports.css
-#   contents:
-#     - css/twdh_reports.css
+twdh_reports-css:
+  filter: cssrewrite
+  output: ckanext-twdh_reports/%(version)s-twdh_reports.css
+  contents:
+    - vendor/datatables.css
+    - vendor/datatables.mark.css
